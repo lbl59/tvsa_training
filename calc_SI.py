@@ -242,8 +242,7 @@ def calc_analytical_SI(M, N, K, policy_file, soln_num, num_years, inputNames, ou
                         #all_var[year*days + day, M+count-2] = cov[day, col1, col2]
                         count = count + 1
         
-        filename_dir = "./release_decisions/"
-        filename_fig = "./Figures/"
+        filename_dir = "/release_decisions/"
 
         #main_folder = os.path.dirname(os.path.dirname(change_dir))
         #print('main folder: ', main_folder)
@@ -253,11 +252,10 @@ def calc_analytical_SI(M, N, K, policy_file, soln_num, num_years, inputNames, ou
         #if os.path.exists("Soln_" + str(soln_num) + "/") == False:
             #os.makedirs("Soln_" + str(soln_num) + "/")
         
-        if not os.path.exists(filename_dir):
-            os.makedirs("./release_decisions/")
-        if not os.path.exists(filename_fig):
-            os.makedirs("./Figures/")
-
+        if os.path.exists(filename_dir) == False:
+            os.makedirs("/release_decisions/")
+            os.makedirs("/Figures/")
+        
         filename_soln = filename_dir + outputNames[output]  + ".txt"
         #filename_deriv = "Solution_precip_var_" + str(output) + ".txt"
         
