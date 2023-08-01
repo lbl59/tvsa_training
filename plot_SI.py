@@ -26,7 +26,7 @@ def plot_tvsa_policy(num_years, soln_num, input_list, colors_list, output_name, 
         input = plt.Rectangle((0,0), 1, 1, fc=colors[l], edgecolor='none')
         legend_labels.append(input)       
 
-    SI_filedir = 'daily/Soln_' + str(soln_num) + '/release_decisions/' + output_name + '.txt'
+    SI_filedir = './daily/Soln_' + str(soln_num) + '/release_decisions/' + output_name + '.txt'
     SI = np.loadtxt(SI_filedir, skiprows = 1,delimiter = ",")
     SI_pos = np.array([])
     SI_neg = np.array([])
